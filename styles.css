@@ -5,5 +5,54 @@
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     line-height: 2;
+    background-color: hsl(47, 88%, 63%);
+    list-style-type: none;
 }
 
+a, a:active, a:hover, a:visited {
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    background-color: white;
+    max-width: 600px;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 10px 10px;
+    padding: 25px;
+    margin: auto;
+}
+
+h1 {
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+}
+
+ul {
+    background-color: inherit;
+}
+
+li {
+    font-size: 20px;
+    color: white;
+    padding: 5px;
+    font-weight: 600;
+    margin: 15px;
+    border-radius: 7px;
+}
+
+li:hover {
+    background-color: hsl(48, 85%, 82%);
+}
+
+li:active {
+    background-color: hsl(47, 100%, 44%);
+}
