@@ -30,7 +30,6 @@ main {
     border-radius: 20px;
     box-shadow: 10px 10px;
     padding: 25px;
-    margin: auto;
 }
 
 
@@ -95,7 +94,6 @@ footer {
     padding: 5px;
 }
 
-
 @media only screen and (max-width: 600px) {
     main {
         width: 90%;
@@ -105,4 +103,3 @@ footer {
         font-size: 12px !important;
     }
 }
-
