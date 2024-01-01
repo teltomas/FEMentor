@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    overflow: clip;
+
+}
+
+main {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-align: justify;
+}
+
+.mouse_highlight {
+    width: 1500px;
+    height: 1500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: radial-gradient(circle, #ffffff15, #ffffff00, #ffffff00);
+    z-index: 10;
+    transform: translateY(-50%) translateX(-50%);
+}
