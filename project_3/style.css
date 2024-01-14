@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    background-color: white;    
+    background-color: white; 
 }
 
 h1 {
@@ -39,18 +39,22 @@ h4 {
     margin-top: 0;
 }
 
-.container {
+main {
     position: absolute;
     top: 50%;
     left: 50%;
     /*-ms-transform: translateY(-50%) translateX(-50%);*/
     transform: translateY(-50%) translateX(-50%);
+}
+
+.container {    
     display: flex;
     width: fit-content;
     border-radius: 1.5rem;
     box-shadow: 0.7rem 0.7rem 1.5rem hsl(221, 100%, 96%);
     width: 600px;
     height: 450px;
+    clear: both;
 }
 
 .result {
@@ -81,8 +85,6 @@ h4 {
     color: hsl(224, 30%, 27%);
     font-size: 0.9rem;
 }
-
-
 
 .result p {
     text-align: center;
@@ -161,6 +163,16 @@ button:hover, button:active {
     background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));;
 }
 
+.attribution {
+    float: bottom;
+    font-size: 11px; 
+    text-align: center; 
+    margin-top: 2rem;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
 
 @media only screen and (max-width: 650px) {
     .container {
@@ -186,6 +198,5 @@ button:hover, button:active {
     .result h2, .result p, .result_circle {
         margin-top: 1rem;
     }
-
 
 }
