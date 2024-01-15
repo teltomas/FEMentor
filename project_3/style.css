@@ -43,11 +43,12 @@ main {
     position: absolute;
     top: 50%;
     left: 50%;
-    /*-ms-transform: translateY(-50%) translateX(-50%);*/
     transform: translateY(-50%) translateX(-50%);
+    width: fit-content;
+    height: fit-content;
 }
 
-.container {    
+.container {        
     display: flex;
     width: fit-content;
     border-radius: 1.5rem;
@@ -164,7 +165,10 @@ button:hover, button:active {
 }
 
 .attribution {
-    float: bottom;
+    position: absolute;
+    bottom: -3rem;
+    clear: both;
+    width: 100%;
     font-size: 11px; 
     text-align: center; 
     margin-top: 2rem;
@@ -175,6 +179,14 @@ button:hover, button:active {
 }
 
 @media only screen and (max-width: 650px) {
+
+    main {
+        position: static;
+        width: 100%;
+        height: 100%;
+        transform: none;
+    }
+
     .container {
         display: flex;
         flex-flow: column;
@@ -197,6 +209,47 @@ button:hover, button:active {
 
     .result h2, .result p, .result_circle {
         margin-top: 1rem;
+    }
+    
+    .attribution {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-height: 450px) and (orientation: landscape) {
+    
+    main {
+        position: static;
+        width: 100%;
+        height: auto;
+        transform: none;
+    }
+
+    .container {
+        border-radius: 0;
+        box-shadow: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    .result {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px 1.5rem 1.5rem 0px;
+    }
+
+    .summary {
+        width: 100%;
+        height: 100%;
+    }
+
+    .result h2, .result p, .result_circle {
+        margin-top: 1rem;
+    }
+
+    .attribution {
+        display: none;
     }
 
 }
