@@ -168,7 +168,7 @@ main {
 
 /* responsivity */
 
-@media only screen and (max-width: 1450px) {
+@media only screen and (max-width: 1400px) {
 
     body {
         height: fit-content;
