@@ -154,10 +154,12 @@ main {
 }
 
 
+/* FEMentor Atribuition */
+
 .attribution { 
     font-size: 11px; 
     text-align: center; 
-    margin-top: 0.5rem;
+    margin-top: 2rem;
 }
 
 .attribution a { 
