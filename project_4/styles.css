@@ -1,3 +1,5 @@
+/* Main Configs */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,17 +15,14 @@ html {
 body {
     background-color: hsl(210, 46%, 95%);
     display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
     height: 100vmin;
 }
 
-h1 {
-
-}
-
 h2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 500;
 }
 
@@ -41,12 +40,16 @@ p {
     color: #8c8d91;
 }
 
+/* container */
+
 main {
-    width: 75%;
+    width: 1440px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2.75rem;
 }
+
+/* cards */
 
 .testemonial {
     padding: 2.5rem;
@@ -57,14 +60,22 @@ main {
     box-shadow: 5rem 5rem 5rem -5rem hsl(230, 4%, 73%);
 }
 
+.quotes {
+    position: absolute;
+    height: 11.5rem;
+    top: 0;
+    right: 8rem;
+}
+
 .identity, h1 {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .identity {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    z-index: 10;
 }
 
 .profile {
@@ -80,10 +91,13 @@ main {
     margin-left: 1.5rem;
 }
 
+/* configs for individual cards */
+
 .one h1, .one h2, 
 .two h1, .two h2,
 .four h1, .four h2 {
     color: #ffffff;
+    z-index: 1;
 }
 
 .one p, 
@@ -94,6 +108,7 @@ main {
 
 
 .one {
+    position: relative;
     grid-area: 1 / 1 / 2 / span 2;
     background-color: hsl(263, 55%, 52%);
 }
@@ -136,4 +151,103 @@ main {
 
 .five .profile {
     border-color: hsl(210, 46%, 95%);
+}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-top: 0.5rem;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* responsivity */
+
+@media only screen and (max-width: 1450px) {
+
+    body {
+        height: fit-content;
+    }
+
+    main {
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 5rem;
+    }
+
+    .five {
+        grid-area: 3 / 1 / span 1 / span 3;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 3rem;
+    }
+
+    .two {
+        grid-area: 2 / 1 / span 1 / span 1;
+    }
+
+    .three {
+        grid-area: 2 / 2 / span 1 / span 1;    
+    }
+
+    .four {
+        grid-area: 3 / 1 / span 1 / span 2;    
+    }
+
+    .five {
+        grid-area: 4 / 1 / span 1 / span 2;
+    }
+    
+}
+
+
+@media only screen and (max-width: 680px) {
+
+    main {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+
+    body {
+        font-size: 10px;;
+    }
+
+    .identity, h1 {
+        margin-bottom: 1rem;
+    }
+
+    .quotes {
+        height: 10rem;
+        right: 2rem;
+    }
+
+    .one {
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
+
+    .two {
+        grid-area: 2 / 1 / span 1 / span 1;
+    }
+
+    .three {
+        grid-area: 3 / 1 / span 1 / span 1;    
+    }
+
+    .four {
+        grid-area: 4 / 1 / span 1 / span 1;    
+    }
+
+    .five {
+        grid-area: 5 / 1 / span 1 / span 1;
+    }
+    
 }
